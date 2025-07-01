@@ -1,0 +1,108 @@
+const iota = (function () {
+    let i = 1;
+    return function () {
+        return i++;
+    };
+})();
+
+export const projects = [
+    {
+        id: iota(),
+        title: 'forge',
+        desc: 'Forge your system',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/forge/main/README',
+        date: '2024-01-15',
+        repoUrl: 'https://github.com/malloc-nbytes/forge',
+        format: 'md',
+    },
+    {
+        id: iota(),
+        title: 'EARL',
+        desc: 'Evaluate And Run Language',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/earl/main/README.org',
+        date: '2024-01-15',
+        repoUrl: 'https://github.com/malloc-nbytes/earl',
+        format: 'org',
+    },
+    {
+        id: iota(),
+        title: 'earlmgr',
+        desc: 'The manager application for EARL',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/earlmgr/main/README.md',
+        date: '2024-01-15',
+        repoUrl: 'https://github.com/malloc-nbytes/earlmgr',
+        format: 'md',
+    },
+    {
+        id: iota(),
+        title: 'ampire',
+        desc: 'A Terminal-based Music Player',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/ampire/main/README.org',
+        date: '2024-01-15',
+        repoUrl: 'https://github.com/malloc-nbytes/ampire',
+        format: 'org',
+    },
+    {
+        id: iota(),
+        title: 'AnimX',
+        desc: 'Animated wallpapers for X',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/AnimX/main/README.md',
+        date: '2024-01-15',
+        repoUrl: 'https://github.com/malloc-nbytes/AnimX',
+        format: 'md',
+    },
+    {
+        id: iota(),
+        title: 'bless',
+        desc: 'A "better" version of `less`',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/bless/main/README.md',
+        date: '2024-06-20',
+        repoUrl: 'https://github.com/malloc-nbytes/bless',
+        format: 'md',
+    },
+    {
+        id: iota(),
+        title: 'bm',
+        desc: 'Bookmark Directories in the Terminal',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/bm/main/README.md',
+        date: '2024-06-20',
+        repoUrl: 'https://github.com/malloc-nbytes/bm',
+        format: 'md',
+    },
+    {
+        id: iota(),
+        title: 'forge-modules',
+        desc: 'Known C modules for forge',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/forge-modules/main/README.md',
+        date: '2024-06-20',
+        repoUrl: 'https://github.com/malloc-nbytes/forge-modules',
+        format: 'md',
+    },
+    {
+        id: iota(),
+        title: 'sic',
+        desc: 'Sample Input Creator',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/sic/main/README.md',
+        date: '2024-06-20',
+        repoUrl: 'https://github.com/malloc-nbytes/sic',
+        format: 'md',
+    },
+    {
+        id: iota(),
+        title: 'camelCase_to_snake',
+        desc: 'Kill those camels!',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/camelCase_to_snake/main/README.md',
+        date: '2024-06-20',
+        repoUrl: 'https://github.com/malloc-nbytes/camelCase_to_snake',
+        format: 'md',
+    },
+    {
+        id: iota(),
+        title: 'stt',
+        desc: 'Simple Time Tracker',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/stt/main/README.md',
+        date: '2024-06-20',
+        repoUrl: 'https://github.com/malloc-nbytes/stt',
+        format: 'md',
+    },
+];

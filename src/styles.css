@@ -10,8 +10,9 @@
 }
 
 body {
+    background-color: #161616;  /* Dark background */
     line-height: 1.6;
-    color: #333;
+    color: #e0e0e0;  /* Light text color */
 }
 
 .app {
@@ -21,7 +22,7 @@ body {
 }
 
 header {
-    background: #f4f4f4;
+    //background: #191919;
     padding: 10px 0;
     margin-bottom: 20px;
 }
@@ -47,6 +48,10 @@ nav a:hover {
     color: #007bff;
 }
 
+/* nav a { */
+/*     color: white; */
+/* } */
+
 .page-title {
     color: yellow;
 }
@@ -62,10 +67,11 @@ nav a:hover {
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
-    background: #fff;
+    //background: #fff;
     transition: transform 0.2s ease, box-shadow 0.2s ease; /* Removed opacity, scale */
     text-decoration: none;
-    color: #333;
+    //color: #333;
+    color: #ffffff;
     display: block;
     cursor: pointer;
     position: relative;
@@ -109,13 +115,13 @@ nav a:hover {
 
 .project-desc code {
     color: yellow;
-    background: #eee;
+    //background: #eee;
     padding: 2px 5px;
     border-radius: 3px;
 }
 
 .readme-content {
-    background: #f9f9f9;
+    background: #191919;
     padding: 20px;
     border-radius: 5px;
     line-height: 1.8;
@@ -139,7 +145,7 @@ nav a:hover {
 }
 
 .readme-content pre {
-    background: #eee;
+    //background: #eee;
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto;
@@ -148,7 +154,7 @@ nav a:hover {
 
 .readme-content code {
     color: yellow;
-    background: #eee;
+    //background: #eee;
     padding: 2px 5px;
     border-radius: 3px;
 }
@@ -156,7 +162,7 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #f4f4f4;
+    //background: #f4f4f4;
     margin-top: 20px;
 }
 
@@ -165,7 +171,7 @@ footer {
 }
 
 .profile-container {
-    background: #f4f4f4;
+    //background: #f4f4f4;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -215,6 +221,14 @@ footer {
     color: #007bff;
     text-decoration: none;
     transition: text-decoration 0.2s ease;
+}
+
+.readme-link {
+    color: #007bff;
+}
+
+.back-to-projs {
+    color: #bb00bb;
 }
 
 .social-links a:hover,

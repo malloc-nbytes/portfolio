@@ -36,9 +36,9 @@ function ProjectDetail() {
         <section>
             <h1 className="page-title">{project.title}</h1>
             <p>Date: {project.date}</p>
-            <Link to="/projects">Back to Projects</Link>
+            <Link className="back-to-projs" to="/projects">Back to Projects</Link>
             <p>
-                <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                <a className="readme-link" href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                     README not rendering? View on GitHub
                 </a>
             </p>

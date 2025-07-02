@@ -19,10 +19,10 @@ export const projects = [
         id: iota(),
         title: 'EARL',
         desc: 'Evaluate And Run Language',
-        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/earl/main/README.org',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/earl/main/README.md',
         date: '2024-01-15',
         repoUrl: 'https://github.com/malloc-nbytes/earl',
-        format: 'org',
+        format: 'md',
     },
     {
         id: iota(),

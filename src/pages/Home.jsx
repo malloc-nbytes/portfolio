@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 
 function Home() {
@@ -34,6 +34,12 @@ function Home() {
                     <li>
                         <FaXTwitter />{' '}
                         <a href="https://x.com/malloc_nbytes" target="_blank" rel="noopener noreferrer">
+                            @malloc_nbytes
+                        </a>
+                    </li>
+                    <li>
+                        <FaInstagram />{' '}
+                        <a href="https://www.instagram.com/malloc_nbytes/" target="_blank" rel="noopener noreferrer">
                             @malloc_nbytes
                         </a>
                     </li>

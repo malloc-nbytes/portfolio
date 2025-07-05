@@ -22,7 +22,7 @@ body {
 }
 
 header {
-    /* background: #191919; */
+    border-radius: 30px;
     padding: 10px 0;
     margin-bottom: 20px;
 }
@@ -35,17 +35,20 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    /* color: #333; */
+    color: #007bff;
     transition: color 0.2s ease;
 }
 
 nav a.active {
     font-weight: 700;
-    color: #007bff;
+    /*color: #007bff;*/
+    color: yellow;
 }
 
 nav a:hover {
-    color: #007bff;
+    /*color: #007bff;*/
+    color: yellow;
 }
 
 /* nav a { */

@@ -53,6 +53,15 @@ export const projects = [
     },
     {
         id: iota(),
+        title: 'xkillr',
+        desc: 'Kill processes',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/xkillr/main/README',
+        date: '2024-06-20',
+        repoUrl: 'https://github.com/malloc-nbytes/xkillr',
+        format: 'md',
+    },
+    {
+        id: iota(),
         title: 'bless',
         desc: 'A "better" version of `less`',
         readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/bless/main/README.md',

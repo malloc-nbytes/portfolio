@@ -10,7 +10,7 @@ export const projects = [
         id: iota(),
         title: 'forge',
         desc: 'Forge your system',
-        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/forge/main/README',
+        readmeUrl: 'https://raw.githubusercontent.com/malloc-nbytes/forge/main/README.md',
         date: '2024-01-15',
         repoUrl: 'https://github.com/malloc-nbytes/forge',
         format: 'md',

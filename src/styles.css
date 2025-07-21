@@ -188,6 +188,28 @@ footer {
     color: yellow;
 }
 
+.profile-about {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: yellow;
+}
+
+.profile-biography {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: yellow;
+}
+
+.profile-disclaimer {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: yellow;
+}
+
 .profile-bio {
     font-size: 1.1rem;
     max-width: 600px;
@@ -228,6 +250,17 @@ footer {
 
 .readme-link {
     color: #007bff;
+}
+
+.project-detail-clone {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: yellow;
+    background: #4444;
+    text-align: center;
+    font-size: 17px;
+
+    white-space: pre-line;
 }
 
 .back-to-projs {

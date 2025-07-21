@@ -35,12 +35,18 @@ function ProjectDetail() {
     return (
         <section>
             <h1 className="page-title">{project.title}</h1>
+            <p>Quick Install:</p>
+            <div className="project-detail-clone">
+                {project.clone}
+            </div>
             <p>Date: {project.date}</p>
             <Link className="back-to-projs" to="/projects">Back to Projects</Link>
             <p>
-                <a className="readme-link" href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                    README not rendering? View on GitHub
-                </a>
+                <div>
+                    <a className="readme-link" href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                        View on GitHub
+                    </a>
+                </div>
             </p>
             <h2 style={{ marginTop: '1.5rem' }}>README:</h2>
             <div className="readme-content">

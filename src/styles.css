@@ -57,6 +57,12 @@ nav a:hover {
 
 .page-title {
     color: yellow;
+    font-size: 30px;
+    text-align: center;
+}
+
+.quick-install {
+    margin-top: 30px;
 }
 
 .project-grid {
@@ -253,12 +259,13 @@ footer {
 }
 
 .copy-btn {
-    background: #4444;
+    /* background: #4444; */
+    background: #161616;
     color: #ffff;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 5px;
-    border-width: 1px;
+    border-width: 0px;
     cursor: pointer;
 }
 

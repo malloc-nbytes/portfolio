@@ -15,6 +15,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/forge',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/forge.git\ncd forge\n./bootstrap.sh\nmake\nsudo make install\nsudo forge',
+        forge: 'N/A',
     },
     {
         id: iota(),
@@ -25,6 +26,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/earl',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/earl.git\ncd earl\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
+        forge: 'sudo forge install malloc-nbytes@earl',
     },
     {
         id: iota(),
@@ -35,6 +37,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/earlmgr',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/earlmgr.git\ncd earlmgr/src\nearl ./earlmgr.rl',
+        forge: 'sudo forge install malloc-nbytes@earlmgr',
     },
     {
         id: iota(),
@@ -45,6 +48,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/ampire',
         format: 'org',
         clone: 'git clone https://www.github.com/malloc-nbytes/ampire.git --recursive\ncd ampire\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
+        forge: 'sudo forge install malloc-nbytes@ampire',
     },
     {
         id: iota(),
@@ -55,6 +59,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/AnimX',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/AnimX.git\ncd AnimX\nautoreconf --install\n./configure\nmake\nsudo make install',
+        forge: 'sudo forge install malloc-nbytes@AnimX',
     },
     {
         id: iota(),
@@ -65,6 +70,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/xkillr',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/xkillr.git\ncd xkillr\nautoreconf --install\nmkdir build\ncd build\n../configure\nmake\nsudo make install',
+        forge: 'sudo forge install malloc-nbytes@xkillr',
     },
     {
         id: iota(),
@@ -75,6 +81,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/bless',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/bless.git\ncd bless\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
+        forge: 'sudo forge install malloc-nbytes@bless',
     },
     {
         id: iota(),
@@ -85,6 +92,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/bm',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/bm.git\ncd bm\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
+        forge: 'sudo forge install malloc-nbytes@bm',
     },
     {
         id: iota(),
@@ -95,6 +103,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/forge-modules',
         format: 'md',
         clone: 'sudo forge -r add-repo https://github.com/malloc-nbytes/forge-modules.git',
+        forge: 'N/A',
     },
     {
         id: iota(),
@@ -105,6 +114,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/sic',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/sic.git\ncd sic/src/\n./build.sh\n./install.sh',
+        forge: 'N/A',
     },
     {
         id: iota(),
@@ -115,6 +125,7 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/camelCase_to_snake',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/camelCase_to_snake.git\ncd camelCase_to_snake/src\n./build.sh\n./install.sh',
+        forge: 'sudo forge install malloc-nbytes@camelCase_to_snake',
     },
     {
         id: iota(),
@@ -125,5 +136,6 @@ export const projects = [
         repoUrl: 'https://github.com/malloc-nbytes/stt',
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/stt.git\ncd stt\ncargo build --release\n sudo cp ./target/release/stt /usr/local/bin',
+        forge: 'sudo forge install malloc-nbytes@stt',
     },
 ];

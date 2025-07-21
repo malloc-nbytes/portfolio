@@ -9,6 +9,7 @@ function ProjectDetail() {
     const [content, setContent] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [copySuccess, setCopySuccess] = useState('');
 
     const project = projects.find((p) => p.id === parseInt(id));
 
@@ -28,6 +29,17 @@ function ProjectDetail() {
         fetchReadme();
     }, [project]);
 
+    const copyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(project.clone);
+            setCopySuccess('Copied!');
+            setTimeout(() => setCopySuccess(''), 2000); // Clear message after 2 seconds
+        } catch (err) {
+            setCopySuccess('Failed to copy');
+            setTimeout(() => setCopySuccess(''), 2000);
+        }
+    };
+
     if (!project) return <h1>Project not found</h1>;
     if (loading) return <h1>Loading project...</h1>;
     if (error) return <p>{error}</p>;
@@ -35,9 +47,17 @@ function ProjectDetail() {
     return (
         <section>
             <h1 className="page-title">{project.title}</h1>
-            <p>Quick Install:</p>
+            <p>Quick Install: <button className="copy-btn" onClick={copyToClipboard}>
+                                  Copy to Clipboard
+                              </button>
+                {copySuccess && <span style={{ marginLeft: '10px', color: 'yellow' }}>{copySuccess}</span>}
+            </p>
             <div className="project-detail-clone">
                 {project.clone}
+            </div>
+            <p>Forge install:</p>
+            <div className="project-detail-forge">
+                {project.forge}
             </div>
             <p>Date: {project.date}</p>
             <Link className="back-to-projs" to="/projects">Back to Projects</Link>

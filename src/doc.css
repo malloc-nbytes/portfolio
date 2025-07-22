@@ -2,29 +2,37 @@ p {
     margin-bottom: 15px;
 }
 
+ul {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-position: outside; /* Ensure bullets are outside the content */
+}
+
+li {
+    margin-left: 15px;
+    padding-left: 5px;
+}
+
 .yellow {
     color: yellow;
 }
 
-/* .csnippet { */
-/*     background: #3333; */
-/*     margin-left: 100px; */
-/*     margin-right: 100px; */
-/* } */
-
 .csnippet {
-    background-color: #1e1e1e; /* Dark background for code */
+    background-color: #1e1e1e;
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto; /* Handle horizontal overflow */
     white-space: pre-wrap; /* Preserve newlines and wrap text */
     margin-bottom: 15px;
+    line-height: 1; /* Reduce line spacing */
 }
 
 .csnippet pre {
     margin: 0; /* Remove default margin */
+    line-height: 1; /* Ensure consistent line spacing */
 }
 
 .csnippet code {
     font-family: "Courier New", Courier, monospace;
+    line-height: 1; /* Ensure consistent line spacing */
 }

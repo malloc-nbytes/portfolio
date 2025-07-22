@@ -5,15 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { projects } from '../data/projects';
 import CopyButton from '../components/CopyButton';
 import CollapseSnippet from '../components/CollapseSnippet'
-
-function showDoc(doc) {
-    return(
-        <>
-            <h1>test</h1>
-            {doc}
-        </>
-    );
-}
+import { MdOutlineQuestionMark } from "react-icons/md";
 
 function ProjectDetail() {
     const { id } = useParams();
@@ -43,8 +35,7 @@ function ProjectDetail() {
     if (loading) return <h1>Loading project...</h1>;
     if (error) return <p>{error}</p>;
 
-    // Capitalize the component to treat it as a React component
-    const DocComponent = project.doc; // Store the component in a variable with a capital letter
+    const DocComponent = project.doc;
 
     return (
         <section>
@@ -57,7 +48,15 @@ function ProjectDetail() {
             </div>
             <h3 className="quick-install">Quick Install: <CopyButton copy={project.clone} /></h3>
             <div className="project-detail-clone">{project.clone}</div>
-            <h3>Forge install: <CopyButton copy={project.forge} /></h3>
+            <h3>
+                Forge install: <CopyButton copy={project.forge} />
+                <button style={{ border: 'none', fontSize: '15px', background: 'none', color: 'white', cursor: 'pointer' }}
+                        onClick={() => {
+                            alert('Forge is a custom package manager that I have made. All of my projects can be installed through it.\n\nhttps://www.github.com/malloc-nbytes/forge.git');
+                        }}>
+                    <MdOutlineQuestionMark />
+                </button>
+            </h3>
             <div className="project-detail-forge">{project.forge}</div>
             <h4 style={{ marginTop: '1.5rem' }}>README (via {project.readmeUrl}):</h4>
             <CollapseSnippet>

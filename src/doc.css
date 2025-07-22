@@ -1,0 +1,30 @@
+p {
+    margin-bottom: 15px;
+}
+
+.yellow {
+    color: yellow;
+}
+
+/* .csnippet { */
+/*     background: #3333; */
+/*     margin-left: 100px; */
+/*     margin-right: 100px; */
+/* } */
+
+.csnippet {
+    background-color: #1e1e1e; /* Dark background for code */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Handle horizontal overflow */
+    white-space: pre-wrap; /* Preserve newlines and wrap text */
+    margin-bottom: 15px;
+}
+
+.csnippet pre {
+    margin: 0; /* Remove default margin */
+}
+
+.csnippet code {
+    font-family: "Courier New", Courier, monospace;
+}

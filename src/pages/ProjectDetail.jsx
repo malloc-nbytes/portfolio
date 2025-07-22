@@ -1,31 +1,16 @@
-import { FaRegCopy } from "react-icons/fa6";
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import { projects } from '../data/projects';
+import CopyButton from '../components/CopyButton';
+import CollapseSnippet from '../components/CollapseSnippet'
 
-// Reusable CopyButton component
-function CopyButton({ textToCopy }) {
-    const [copySuccess, setCopySuccess] = useState('');
-
-    const copyToClipboard = async () => {
-        try {
-            await navigator.clipboard.writeText(textToCopy);
-            setCopySuccess('Copied!');
-            setTimeout(() => setCopySuccess(''), 2000); // Clear message after 2 seconds
-        } catch (err) {
-            setCopySuccess('Failed to copy');
-            setTimeout(() => setCopySuccess(''), 2000);
-        }
-    };
-
-    return (
+function showDoc(doc) {
+    return(
         <>
-            <button className="copy-btn" onClick={copyToClipboard}>
-                <FaRegCopy style={{ fontSize: '15px' }}/>
-            </button>
-            {copySuccess && <span style={{ marginLeft: '10px', color: 'yellow' }}>{copySuccess}</span>}
+            <h1>test</h1>
+            {doc}
         </>
     );
 }
@@ -58,6 +43,9 @@ function ProjectDetail() {
     if (loading) return <h1>Loading project...</h1>;
     if (error) return <p>{error}</p>;
 
+    // Capitalize the component to treat it as a React component
+    const DocComponent = project.doc; // Store the component in a variable with a capital letter
+
     return (
         <section>
             <h1 className="page-title">{project.title}</h1>
@@ -67,22 +55,28 @@ function ProjectDetail() {
                     View on GitHub
                 </a>
             </div>
-            <h3 className="quick-install">Quick Install: <CopyButton textToCopy={project.clone} /></h3>
-            <div className="project-detail-clone">
-                {project.clone}
-            </div>
-            <h3>Forge install: <CopyButton textToCopy={project.forge} /></h3>
-            <div className="project-detail-forge">
-                {project.forge}
-            </div>
+            <h3 className="quick-install">Quick Install: <CopyButton copy={project.clone} /></h3>
+            <div className="project-detail-clone">{project.clone}</div>
+            <h3>Forge install: <CopyButton copy={project.forge} /></h3>
+            <div className="project-detail-forge">{project.forge}</div>
             <h4 style={{ marginTop: '1.5rem' }}>README (via {project.readmeUrl}):</h4>
-            <div className="readme-content">
-                {project.format !== 'md' ? (
-                    <pre>{content}</pre>
-                ) : (
-                    <ReactMarkdown>{content}</ReactMarkdown>
-                )}
-            </div>
+            <CollapseSnippet>
+                <div className="readme-content">
+                    {project.format !== 'md' ? (
+                        <pre>{content}</pre>
+                    ) : (
+                        <ReactMarkdown>{content}</ReactMarkdown>
+                    )}
+                </div>
+            </CollapseSnippet>
+            {DocComponent && (
+                <>
+                    <h2 style={{ marginTop: '1.5rem', textAlign: 'center' }}>Official Documentation</h2>
+                    <div className="project-detail-doc">
+                        <DocComponent />
+                    </div>
+                </>
+            )}
         </section>
     );
 }

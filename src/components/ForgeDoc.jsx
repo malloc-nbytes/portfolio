@@ -91,18 +91,13 @@ function yel(s) {
 function ForgeDoc() {
     return (
         <>
-                <CollapseSnippet>
-                    <div className="csnippet">{forgeWalkthrough1}</div>
-                </CollapseSnippet>
-
-
             <h1>Introduction</h1>
             <CollapseSnippet>
                 <p>
-                    {yel('Forge')} is a package manager where you "forge" your own packages in the form
+                    {yel('forge')} is a package manager where you "forge" your own packages in the form
                     of {yel('C')} source files. Every package that you want to install must have an
                     associated {yel('C')} file that contains rules and functions on how to build, install, uninstall, etc.
-                    To help with this, a suite of functions and data structures are supplied as the {yel('forge API')}.
+                    However, {yel('forge')} is not <i>just</i> a package manager, but also a full {yel('C')} development library.
                 </p>
             </CollapseSnippet>
             <h1>Getting Started</h1>
@@ -207,6 +202,19 @@ function ForgeDoc() {
                             If {yel('pkg->get_changes()')} is {yel('NULL')}, then it will delete the cached source code and reinstall it.
                         </li>
                     </ul>
+                </p>
+            </CollapseSnippet>
+            <h1>API</h1>
+            <CollapseSnippet>
+                <p>
+                    {yel('forge')} is not only a package manager, but it is a full {yel('C')} development library.
+                </p>
+                <p>
+                    As stated above, use {yel('forge api-list')} and {yel('forge api [api_name]')} to view the interface.
+                </p>
+                <p>
+                    Use {yel('-lforge')} to link with {yel('forge')}. However, other {yel('cflags')} may be added in the future
+                    so it may be a good idea to use {yel('forge lib')} i.e., {yel('cc -o prog prog.c $(forge lib)')}.
                 </p>
             </CollapseSnippet>
         </>

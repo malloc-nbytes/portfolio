@@ -1,4 +1,5 @@
 import ForgeDoc from '../components/ForgeDoc';
+import EarlDoc from '../components/EarlDoc';
 
 const iota = (function () {
     let i = 1;
@@ -28,7 +29,7 @@ export const projects = [
         format: 'md',
         clone: 'git clone https://www.github.com/malloc-nbytes/earl.git\ncd earl\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
         forge: 'sudo forge install malloc-nbytes@earl',
-        doc: undefined,
+        doc: EarlDoc,
     },
     {
         id: iota(),

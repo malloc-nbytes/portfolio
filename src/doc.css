@@ -36,3 +36,40 @@ li {
     font-family: "Courier New", Courier, monospace;
     line-height: 1; /* Ensure consistent line spacing */
 }
+
+/* Styles for the expanded CollapseSnippet */
+.expanded p,
+.expanded li,
+.expanded code {
+    position: relative; /* For positioning the ::before pseudo-element */
+    display: block; /* Ensure each element is treated as a block for line-by-line styling */
+}
+
+/* Add a dim gray bar before each line in expanded content */
+.expanded p::before,
+.expanded li::before,
+.expanded code::before {
+    content: '';
+    position: absolute;
+    left: -10px; /* Position the bar slightly to the left of the content */
+    top: 0;
+    bottom: 0;
+    width: 4px; /* Width of the gray bar */
+    background-color: rgba(128, 128, 128, 0.2); /* Dim gray with low opacity */
+}
+
+/* Ensure code blocks handle line breaks correctly */
+.expanded .csnippet code {
+    white-space: pre-wrap; /* Preserve line breaks in code */
+    display: block; /* Treat each line as a block for the ::before bar */
+}
+
+/* Adjust padding for nested content to avoid bar overlap */
+.expanded .csnippet {
+    padding-left: 15px; /* Add padding to account for the gray bar */
+}
+
+/* Ensure nested lists have proper spacing */
+.expanded ul {
+    padding-left: 35px; /* Adjust for nested lists to align with the bar */
+}

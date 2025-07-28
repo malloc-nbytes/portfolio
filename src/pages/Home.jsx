@@ -1,26 +1,27 @@
 import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
+import TabBar from '../components/TabBar';
 
 function Home() {
+    const tabs = [
+        {
+            title: 'About',
+            content: 'I\'m a software developer skilled in C, C++, OCaml, and Haskell. I build efficient, reliable, and scalable code with a focus on systems and functional programming.'
+        },
+        {
+            title: 'Biography',
+            content: 'I began my journey creating electronic music with Ableton Live for seven years, honing my creative and technical skills. Transitioning to programming, I earned an Associate’s Degree in Computer Information Technology at a community college, starting with C# and progressing to Java, C++, and C. I later completed a Bachelor’s Degree in Software Engineering at Lipscomb University, solidifying my interest in low-level software.'
+        },
+        {
+            title: 'Disclaimer',
+            content: 'All my open-source projects are licensed under either the MIT License or the GNU Lesser General Public License (LGPL) v2.'
+        }
+    ];
+
     return (
         <section className="home-section">
             <div className="profile-container">
-                <div className="profile-about">About</div>
-                <p className="profile-bio">
-                    I'm a software developer skilled in C, C++, OCaml, and Haskell. I build efficient,
-                    reliable, and scalable code with a focus on systems and functional programming.
-                </p>
-                <div className="profile-biography">Biography</div>
-                <p className="profile-bio">
-                    I began my journey creating electronic music with Ableton Live for seven years, honing my creative and technical skills.
-                    Transitioning to programming, I earned an Associate’s Degree in Computer Information Technology at a community college,
-                    starting with C# and progressing to Java, C++, and C. I later completed a Bachelor’s Degree in Software Engineering at
-                    Lipscomb University, solidifying my interest in low-level software.
-                </p>
-                <div className="profile-disclaimer">Disclaimer</div>
-                <p className="profile-bio">
-                    All my open-source projects are licensed under either the MIT License or the GNU Lesser General Public License (LGPL) v2.
-                </p>
+                <TabBar tabs={tabs} />
             </div>
 
             <div className="links-container">

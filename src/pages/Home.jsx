@@ -15,7 +15,7 @@ function Home() {
         {
             title: 'Disclaimer',
             content: 'All my open-source projects are licensed under either the MIT License or the GNU Lesser General Public License (LGPL) v2.'
-        }
+        },
     ];
 
     return (

@@ -10,7 +10,9 @@ function ProjectCard({ project, className }) {
                 <div className="project-desc">
                     <ReactMarkdown>{project.desc}</ReactMarkdown>
                 </div>
-                <p>Date: {project.date}</p>
+                <p>Tech: <span className='yellow'>{project.tech}</span></p>
+                <p>OS: <span className='yellow'>{project.os}</span></p>
+                <p>Category: <span className='yellow'>{project.cat}</span></p>
             </div>
         </Link>
     );

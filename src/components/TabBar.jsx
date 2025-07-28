@@ -1,18 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 function TabBar({ tabs }) {
     const [activeTab, setActiveTab] = useState(0);
-    const [showLeftArrow, setShowLeftArrow] = useState(false);
-    const [showRightArrow, setShowRightArrow] = useState(false);
     const tabBarRef = useRef(null);
     const tabRefs = useRef([]);
 
     const checkOverflow = () => {
         if (tabBarRef.current) {
             const { scrollWidth, clientWidth, scrollLeft } = tabBarRef.current;
-            setShowLeftArrow(scrollLeft > 0);
-            setShowRightArrow(scrollLeft + clientWidth < scrollWidth - 1);
         }
     };
 
@@ -47,7 +42,7 @@ function TabBar({ tabs }) {
                 left: scrollLeft,
                 behavior: 'smooth'
             });
-            setTimeout(checkOverflow, 300); // Update arrows after scroll
+            //setTimeout(checkOverflow, 300); // Update arrows after scroll
         }
     }, [activeTab, tabs]);
 
@@ -61,11 +56,6 @@ function TabBar({ tabs }) {
     return (
         <div className="tabbar-container">
             <div className="tabbar-wrapper">
-                {showLeftArrow && (
-                    <button className="tabbar-arrow left" onClick={() => scrollTabs('left')}>
-                        <FaArrowLeft />
-                    </button>
-                )}
                 <div className="tabbar" ref={tabBarRef}>
                     {tabs.map((tab, index) => (
                         <button
@@ -78,11 +68,6 @@ function TabBar({ tabs }) {
                         </button>
                     ))}
                 </div>
-                {showRightArrow && (
-                    <button className="tabbar-arrow right" onClick={() => scrollTabs('right')}>
-                        <FaArrowRight />
-                    </button>
-                )}
             </div>
             <div className="tab-content">
                 <p className="profile-bio">{tabs[activeTab].content}</p>

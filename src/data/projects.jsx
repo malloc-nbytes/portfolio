@@ -19,6 +19,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/forge.git\ncd forge\n./bootstrap.sh\nmake\nsudo make install\nsudo forge',
         forge: 'N/A',
         doc: ForgeDoc,
+        tech: "C autotools",
+        os: "Linux",
+        cat: "package manager, LFS",
     },
     {
         id: iota(),
@@ -30,6 +33,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/earl.git\ncd earl\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
         forge: 'sudo forge install malloc-nbytes@earl',
         doc: EarlDoc,
+        tech: "C++ EARL CMake",
+        os: "Linux OSX Windows",
+        cat: "language",
     },
     {
         id: iota(),
@@ -41,6 +47,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/earlmgr.git\ncd earlmgr/src\nearl ./earlmgr.rl',
         forge: 'sudo forge install malloc-nbytes@earlmgr',
         doc: undefined,
+        tech: "EARL",
+        os: "Linux OSX",
+        cat: "utility, package manager",
     },
     {
         id: iota(),
@@ -52,6 +61,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/ampire.git --recursive\ncd ampire\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
         forge: 'sudo forge install malloc-nbytes@ampire',
         doc: undefined,
+        tech: "C SDL autotools",
+        os: "Linux OSX",
+        cat: "music, TUI",
     },
     {
         id: iota(),
@@ -63,6 +75,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/AnimX.git\ncd AnimX\nautoreconf --install\n./configure\nmake\nsudo make install',
         forge: 'sudo forge install malloc-nbytes@AnimX',
         doc: undefined,
+        tech: "C ffmpeg autotools",
+        os: "Linux(X11)",
+        cat: "image/video",
     },
     {
         id: iota(),
@@ -74,6 +89,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/xkillr.git\ncd xkillr\nautoreconf --install\nmkdir build\ncd build\n../configure\nmake\nsudo make install',
         forge: 'sudo forge install malloc-nbytes@xkillr',
         doc: undefined,
+        tech: "C ncurses autotools",
+        os: "Linux",
+        cat: "utility, TUI",
     },
     {
         id: iota(),
@@ -85,6 +103,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/bless.git\ncd bless\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
         forge: 'sudo forge install malloc-nbytes@bless',
         doc: undefined,
+        tech: "C CMake",
+        os: "Linux OSX",
+        cat: "utility, TUI",
     },
     {
         id: iota(),
@@ -96,6 +117,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/bm.git\ncd bm\nmkdir build\ncd build\ncmake -S .. -B .\nmake\nsudo make install',
         forge: 'sudo forge install malloc-nbytes@bm',
         doc: undefined,
+        tech: "C CMake",
+        os: "Linux (X11)",
+        cat: "utility, TUI",
     },
     {
         id: iota(),
@@ -107,6 +131,9 @@ export const projects = [
         clone: 'sudo forge -r add-repo https://github.com/malloc-nbytes/forge-modules.git',
         forge: 'N/A',
         doc: undefined,
+        tech: "C forge (automated)",
+        os: "Linux",
+        cat: "repository",
     },
     {
         id: iota(),
@@ -118,6 +145,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/sic.git\ncd sic/src/\n./build.sh\n./install.sh',
         forge: 'N/A',
         doc: undefined,
+        tech: "Haskell",
+        os: "Linux",
+        cat: "language",
     },
     {
         id: iota(),
@@ -129,6 +159,9 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/camelCase_to_snake.git\ncd camelCase_to_snake/src\n./build.sh\n./install.sh',
         forge: 'sudo forge install malloc-nbytes@camelCase_to_snake',
         doc: undefined,
+        tech: "OCaml",
+        os: "Linux OSX",
+        cat: "joke",
     },
     {
         id: iota(),
@@ -140,5 +173,8 @@ export const projects = [
         clone: 'git clone https://www.github.com/malloc-nbytes/stt.git\ncd stt\ncargo build --release\n sudo cp ./target/release/stt /usr/local/bin',
         forge: 'sudo forge install malloc-nbytes@stt',
         doc: undefined,
+        tech: "Rust",
+        os: "Linux OSX",
+        cat: "utility",
     },
 ];

@@ -15,6 +15,11 @@ function Header() {
                             Projects
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/technology" className={({ isActive }) => (isActive ? 'active' : '')}>
+                            Technology
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
         </header>

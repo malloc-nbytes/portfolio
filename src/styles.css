@@ -385,3 +385,20 @@ footer {
         transform: translateY(0);
     }
 }
+
+.indent {
+    padding-left: 30px;
+}
+
+.note {
+    padding-left: 30px;
+    background: #191919;
+    color: #999999;
+    /* border: 1px solid #999999; */
+    padding: 20px;
+    /* border-radius: 8px; */
+}
+
+ul {
+    padding-bottom: 10px;
+}

@@ -106,20 +106,19 @@ expr_evaluate(expr *e)
         <>
             <div>
                 <h1>Languages of Choice: {yel('C')}, {yel('OCaml')}</h1>
-                <h2>Why {yel('C')}?</h2>
+                <h2>Why {yel('C')} and not {yel('C++')}?</h2>
                 <p>
-                    I prefer {yel('C')} over other languages (such as {yel('C++')}) for various reasons, but
-                    the main reason is because I value simplicity and explicitness over layers of abstraction.
-                    Take {yel('std::vector<T>')} as an example. If you are just starting {yel('C++')}, all you know that it is
+                    I prefer it for various reasons, but mainly because I value simplicity and explicitness
+                    over layers of abstraction. Take {yel('std::vector<T>')} as an example. If you are just starting {yel('C++')}, all you know that it is
                     a useful container for a growable array. Behind the scenes however, there are several things that you need to be aware of
                     (if you are implementing containers for yourself).
                 </p>
                 <ul>
-                    <li>Rule of 5 (if >= {yel('C++11')}, otherwise Rule of 3)</li>
+                    <li>Rule of 5 (if &gt;= {yel('C++11')}, otherwise Rule of 3)</li>
                     <li>Resource Acquisition is Initialization (RAII)</li>
                 </ul>
                 <p>
-                    I am generally not a fan of this model. If I want something similar to this in {yel('C')}, you can do it via the function signatures.
+                    I am generally not a fan of this model. If I want something similar to this in {yel('C')}, you can do it via function signatures.
                     The following are some functions that I may implement:
                 </p>
                     <ul>
@@ -209,19 +208,35 @@ expr_evaluate(expr *e)
                 <h2>Why {yel('OCaml')}?</h2>
                 <p>
                     I will sometimes use the functional paradigm to create projects because sometimes it is just
-                    better (i.e., <a className='readme-link' href='https://en.wikipedia.org/wiki/Lexical_analysis'>lexical analysis</a>, <a className='readme-link' href='https://en.wikipedia.org/wiki/Parsing'>parsing</a>).
+                    better for the situation (i.e., <a className='readme-link' href='https://en.wikipedia.org/wiki/Lexical_analysis'>lexical analysis</a>, <a className='readme-link' href='https://en.wikipedia.org/wiki/Parsing'>parsing</a>).
                 </p>
-                TODO
+                <p>
+                    I perfer {yel('OCaml')} over {yel('Haskell')} because it provides the freedom to write imperatively when you need to.
+                    However this make {yel('OCaml')} not a <i>purely</i> functional language.
+
+                </p>
+                <p>
+                    One thing that I have learned from functional programming is that once you write a program, 90% of the time it will
+                    work the way you want. However debugging is a nightmare if it does not.
+                </p>
             </div>
 
             <div>
                 <h1>Operating System of Choice</h1>
-                TODO
+                <p>
+                    I solely use {yel('Linux')} on all of my computers, and almost never run {yel('Windows')} or {yel('OSX')}.
+                    For my distribution, I commonly switch between {yel('Gentoo')} and {yel('Debian')}, although I am currently experimenting
+                    with <a className='readme-link' href='https://www.linuxfromscratch.org/lfs/'>Linux From Scratch</a>.
+                </p>
             </div>
 
             <div>
                 <h1>Editors of Choice</h1>
-                TODO
+                <p>
+                    This section really does not matter at all, but I want to put it on here anyways. I
+                    use <a className='readme-link' href='https://www.gnu.org/software/emacs/'>Emacs</a> for the majority of the time but occasionally I will
+                    use <a className='readme-link' href='https://www.vim.org/'>Vim</a>.
+                </p>
             </div>
         </>
     );

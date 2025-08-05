@@ -66,11 +66,6 @@ function Home() {
                             EARL Documentation
                         </a>
                     </li>
-                    <li>
-                        <a href="https://malloc-nbytes.github.io/forge-web/index.html" target="_blank" rel="noopener noreferrer">
-                            Forge Documentation
-                        </a>
-                    </li>
                 </ul>
             </div>
         </section>

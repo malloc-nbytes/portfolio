@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram, FaTwitch, FaYoutube } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import TabBar from '../components/TabBar';
 
@@ -52,6 +52,18 @@ function Home() {
                     <li>
                         <FaInstagram />{' '}
                         <a href="https://www.instagram.com/malloc_nbytes/" target="_blank" rel="noopener noreferrer">
+                            @malloc_nbytes
+                        </a>
+                    </li>
+                    <li>
+                        <FaTwitch />{' '}
+                        <a href="https://www.twitch.tv/malloc_nbytes" target="_blank" rel="noopener noreferrer">
+                            @malloc_nbytes (I Stream on Twitch)
+                        </a>
+                    </li>
+                    <li>
+                        <FaYoutube />{' '}
+                        <a href="https://www.youtube.com/@malloc-nbytes" target="_blank" rel="noopener noreferrer">
                             @malloc_nbytes
                         </a>
                     </li>

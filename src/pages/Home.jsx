@@ -38,12 +38,6 @@ function Home() {
                         </a>
                     </li>
                     <li>
-                        <FaLinkedin />{' '}
-                        <a href="https://linkedin.com/in/Zachary-Haskins" target="_blank" rel="noopener noreferrer">
-                            Zachary-Haskins
-                        </a>
-                    </li>
-                    <li>
                         <FaXTwitter />{' '}
                         <a href="https://x.com/malloc_nbytes" target="_blank" rel="noopener noreferrer">
                             @malloc_nbytes
@@ -58,7 +52,7 @@ function Home() {
                     <li>
                         <FaTwitch />{' '}
                         <a href="https://www.twitch.tv/malloc_nbytes" target="_blank" rel="noopener noreferrer">
-                            @malloc_nbytes (I Stream on Twitch)
+                            @malloc_nbytes (I Stream on Twitch!)
                         </a>
                     </li>
                     <li>

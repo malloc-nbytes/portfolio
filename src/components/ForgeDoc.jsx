@@ -170,7 +170,10 @@ function ForgeDoc() {
                     <ul>
                         <li>For your package to be visible, you must put {yel('FORGE_GLOBAL')} aka {yel('__attribute__((visibility("default")))')} before
                         the {yel('pkg')} struct definition</li>
-                        <li>The dependencies array ({yel('char **')}) must be {yel('NULL')} terminated</li>
+                        <li>The dependencies array ({yel('char **')}) must be {yel('NULL')} terminated or set to {yel('NULL')} if not needed</li>
+                        <li>The msgs array ({yel('char **')}) must be {yel('NULL')} terminated or set to {yel('NULL')} if not needed</li>
+                        <li>The suggested array ({yel('char **')}) must be {yel('NULL')} terminated or set to {yel('NULL')} if not needed</li>
+                        <li>The rebuilds array ({yel('char **')}) must be {yel('NULL')} terminated or set to {yel('NULL')} if not needed</li>
                         <li>{yel('pkg->download()')} is guaranteed to be the first function that runs when doing {yel('forge install')}</li>
                         <li>All memory allocated in {yel('pkg')} functions needs to be manually {yel('free()')}'d</li>
                         <li>
@@ -179,7 +182,6 @@ function ForgeDoc() {
                             <ul>
                                 <li>{yel('pkg->build()')}</li>
                                 <li>{yel('pkg->install()')}</li>
-                                <li>{yel('pkg->uninstall()')}</li>
                                 <li>{yel('pkg->update()')}</li>
                                 <li>{yel('pkg->get_changes()')}</li>
                             </ul>

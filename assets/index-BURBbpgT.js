@@ -140,11 +140,10 @@ cd build
 cmake -S .. -B .
 make
 sudo make install`,forge:"forge --only install malloc-nbytes@earl",doc:dx,tech:"C++ EARL CMake",os:"Linux OSX Windows",cat:"language"},{id:Yt(),title:"ww",desc:"A Dependency-Free Terminal Text Editor",readmeUrl:"https://raw.githubusercontent.com/malloc-nbytes/ww/main/README.org",repoUrl:"https://github.com/malloc-nbytes/ww",format:"org",clone:`git clone https://www.github.com/malloc-nbytes/ww
-cd ww
-autoreconf -iv
-./configure --prefix=/usr/local
+cd ww/src
+python3 premake.py --prefix=/usr/local
 make
-sudo make install`,forge:"forge --only install malloc-nbytes@ww",doc:void 0,tech:"C autotools",os:"Linux",cat:"editor"},{id:Yt(),title:"earlmgr",desc:"The manager application for EARL",readmeUrl:"https://raw.githubusercontent.com/malloc-nbytes/earlmgr/main/README.md",repoUrl:"https://github.com/malloc-nbytes/earlmgr",format:"md",clone:`git clone https://www.github.com/malloc-nbytes/earlmgr.git
+sudo make install`,forge:"forge --only install malloc-nbytes@ww",doc:void 0,tech:"C",os:"Linux",cat:"editor"},{id:Yt(),title:"earlmgr",desc:"The manager application for EARL",readmeUrl:"https://raw.githubusercontent.com/malloc-nbytes/earlmgr/main/README.md",repoUrl:"https://github.com/malloc-nbytes/earlmgr",format:"md",clone:`git clone https://www.github.com/malloc-nbytes/earlmgr.git
 cd earlmgr/src
 earl ./earlmgr.rl`,forge:"N/A",doc:void 0,tech:"EARL",os:"Linux OSX",cat:"utility, package manager"},{id:Yt(),title:"ampire",desc:"A Terminal-based Music Player",readmeUrl:"https://raw.githubusercontent.com/malloc-nbytes/ampire/main/README.org",repoUrl:"https://github.com/malloc-nbytes/ampire",format:"org",clone:`git clone https://www.github.com/malloc-nbytes/ampire.git --recursive
 cd ampire
